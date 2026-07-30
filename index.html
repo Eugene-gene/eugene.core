@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EugeneCore — Parts. Built Right.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">EUGENE<span class="dot">•</span>CORE</div>
+    <nav class="links">
+      <a href="#laptops">Laptops</a>
+      <a href="#parts">Parts</a>
+      <a href="#builds">Builds</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-right">
+      <button class="cart-btn" id="cartBtn">CART <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="trace-layer" id="heroTrace" viewBox="0 0 1240 560" preserveAspectRatio="none"></svg>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Component-grade hardware</div>
+      <h1 class="hero-title">Every part<br>traced back to<br><span class="accent">what it's for.</span></h1>
+      <p class="hero-sub">No bundles you didn't ask for, no vague spec sheets. Eugene.Core sells laptops and parts the way an engineer reads a datasheet plainly, and in full.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('laptops').scrollIntoView({behavior:'smooth'})">Shop laptops</button>
+        <button class="btn-ghost" onclick="document.getElementById('parts').scrollIntoView({behavior:'smooth'})">Shop Parts</button>
+      </div>
+    </div>
+    <div class="spec-panel">
+      <div class="spec-head"><span>FEATURED — ROG Zephyrus G16</span>
+        <span>IN STOCK</span>
+      </div>
+      <div class="spec-row"><span class="k">CPU</span>
+        <span class="v">14-core, 5.1GHz boost</span>
+      </div>
+      <div class="spec-row"><span class="k">GPU</span>
+        <span class="v hi">16GB dedicated</span>
+      </div>
+      <div class="spec-row"><span class="k">RAM</span>
+        <span class="v">32GB LPDDR5</span>
+      </div>
+      <div class="spec-row"><span class="k">Storage</span>
+        <span class="v">1TB NVMe Gen4</span>
+      </div>
+      <div class="spec-row"><span class="k">Display</span>
+        <span class="v">14" 2.8K 120Hz</span>
+      </div>
+      <div class="spec-row"><span class="k">Battery</span>
+        <span class="v hi">18hr rated</span>
+      </div>
+      <div class="spec-row"><span class="k">Weight</span>
+        <span class="v">1.4kg</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="trust-item"><div class="trust-num">14-day</div>
+  <div class="trust-label">No-questions returns</div></div>
+  <div class="trust-item"><div class="trust-num">3yr</div>
+  <div class="trust-label">Parts warranty</div></div>
+  <div class="trust-item"><div class="trust-num">100%</div>
+  <div class="trust-label">Tested before shipping</div></div>
+  <div class="trust-item"><div class="trust-num">24/7</div>
+  <div class="trust-label">Build support chat</div></div>
+</div>
+
+<section class="section" id="laptops">
+  <div class="section-head">
+    <div class="section-title"><span class="idx">01</span>Laptops</div>
+    <div class="tabs">
+      <button class="tab active">All</button>
+      <button class="tab">Ultraportable</button>
+      <button class="tab">Performance</button>
+    </div>
+  </div>
+  <div class="grid" id="laptopGrid"></div>
+</section>
+
+<section class="section" id="parts">
+  <div class="section-head">
+    <div class="section-title"><span class="idx">02</span>Parts</div>
+    <div class="tabs">
+      <button class="tab active">All</button>
+      <button class="tab">GPU</button>
+      <button class="tab">Storage</button>
+      <button class="tab">Memory</button>
+    </div>
+  </div>
+  <div class="grid" id="partsGrid"></div>
+</section>
+
+<section class="section" id="builds">
+  <div class="section-head">
+    <div class="section-title"><span class="idx">03</span>Build guides</div>
+  </div>
+  <div class="grid" style="grid-template-columns: repeat(3,1fr);">
+    <div class="card">
+      <div class="card-tag">Guide · 8 min</div>
+      <div class="card-name">Picking a GPU that fits your case</div>
+      <div class="card-desc">Clearance, wattage headroom, and the three measurements everyone skips.</div>
+    </div>
+    <div class="card">
+      <div class="card-tag">Guide · 6 min</div>
+      <div class="card-name">NVMe vs SATA: what actually changes</div>
+      <div class="card-desc">Where the speed difference shows up in real use, and where it doesn't.</div>
+    </div>
+    <div class="card">
+      <div class="card-tag">Guide · 10 min</div>
+      <div class="card-name">Cooling a small-form-factor build</div>
+      <div class="card-desc">Airflow paths for cases under 20 liters, with thermal targets by component.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-head">
+    <div class="section-title"><span class="idx">04</span>About Eugene.Core</div>
+  </div>
+  <p style="max-width:640px; color:var(--text-dim); font-size:15px;">
+    Started by students who were tired of spec sheets written for marketing instead of builders. Every listing here states what it does and what it doesn't. If a part is a bottleneck for a use case, we say so in the description, not in an asterisk.
+  </p>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-col">
+      <h4>SHOP</h4>
+      <a href="#laptops">Laptops</a>
+      <a href="#parts">Parts</a>
+      <a href="#builds">Build guides</a>
+    </div>
+    <div class="footer-col">
+      <h4>SUPPORT</h4>
+      <a href="#">Shipping & returns</a>
+      <a href="#">Warranty</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="#about">About</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Developed by Eugene</span>
+    <span>Built for people who read the spec sheet</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="drawer-close" id="drawerClose">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="drawer-total"><span>Total</span><span id="drawerTotal">$0</span></div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

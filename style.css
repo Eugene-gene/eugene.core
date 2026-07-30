@@ -173,7 +173,6 @@
     position: relative; overflow:hidden;*/
     aspect-ratio: 1 / 1; /* Ginagawang 1:1 ratio o Perfect Square */
     width: 100%;
-  
     border-radius: 4px;
     background: linear-gradient(135deg, var(--bg-panel-hi), #121620);
     display: flex;
